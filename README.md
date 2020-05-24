@@ -19,17 +19,20 @@ Code for Ultra-Fine Entity Typing (ACL 2018)
 [Train model]
 
 5. On open dataset: 
+
    python3 main.py MODEL_ID -lstm_type single -enhanced_mention -data_setup joint -add_crowd -multitask
 
    On Ontonotes dataset:
+   
    python3 main.py onto -lstm_type single -goal onto  -enhanced_mention
    
 [Test model]
 
 6. On open dataset:
+
    python3 main.py MODEL_ID -lstm_type single -enhanced_mention -data_setup joint -add_crowd -multitask -mode test -reload_model_name MODEL_NAME_TIMESTAMP -eval_data crowd/test.json -load
 
    On Ontonotes dataset:
+   
    python main.py MODEL_ID -lstm_type single -enhanced_mention -mode test -goal onto -reload_model_name MODEL_NAME_TIMESTAMP -load
-
 
